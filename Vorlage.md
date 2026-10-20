@@ -8,7 +8,7 @@
 
 ## Aufgabe 1: Anforderungsanalyse
 
-Analyse der Spielidee (Tipp: Netzwerkprotokolldokumentation kann zusätzlich beim Verständnis der Spielidee helfen) um 7 unterschiedliche Anforderungen (bestehend aus 3 funktionalen, 3 nichtfunktionalen und einer zusätzlichen Designbedingung) nach den folgenden Kriterien zu dokumentieren. Achten Sie darauf die in Skriptum und der Vorlesung behandelten **Qualitätsaspekten** (besonders: atomar, Aktor/System, Aktion, wann, standardisierte Schlüsselwörter) durchgehend zu berücksichtigen.
+Die Anforderungen 1-7 wurden aus Spielidee abgeleitet
 
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
