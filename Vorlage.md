@@ -33,7 +33,7 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 4**
 
-- **Anforderung**: Antwortzeit per Spielaktion - Sobald der Client an der Reihe ist, MUSS der Client in hoechsents 5 Senkunden ANtwort am Server schicken, um nicht zu Verlieren
+- **Anforderung**: Antwortzeit per Spielaktion - Sobald der Client an der Reihe ist, muss der Client in hoechsents 5 Senkunden ANtwort am Server schicken, um nicht zu Verlieren
 - **Bezugsquelle**: Spielidee, **Für jede dieser rundenbasierten Spielaktion hat die KI maximal 5 Sekunden Bedenkzeit... Sollten diese Bedingungen nicht erfüllt werden, verliert die KI, welche gerade an der Reihe ist, das Spiel automatisch und der zugehörige menschliche Spieler bekommt dies vom Client mitgeteilt.**
 
 **Anforderung 5**
@@ -50,6 +50,6 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 7**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: - Benutzeroberflaeche - Waehrend des Spiels muss der Client alle Ausgaben fuer den ANwender ausschliesslich ueber ein Command-Line-Interface darstellen
+- **Bezugsquelle**: Spielidee, **Während des Spiels müssen die Karte und deren bekannten Eigenschaften und wichtige Spielzustände von den Clients mittels command-line interface (CLI) für Anwender nachvollziehbar visualisiert werden.**
 
