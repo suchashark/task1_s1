@@ -21,12 +21,12 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 2**
 
-- **Anforderung**: Aufnehmen eines Schatzes - Das Aufnehmen eines Schatzes muss durchgeführt werden, wenn Spielfigur das Spielfeld mit einem Schatze der Karte betritt
-- **Bezugsquelle**: Spielidee, **Das Aufnehmen eines Schatzes und die Übernahme der Burg erfolgen automatisch durch den Server, sobald eine Spielfigur das jeweilige Spielfeld der Karte betritt.  **
+- **Anforderung**: Bewegung zum Schatz - Der Client muss seine Spielfigur zum Schatz bewegen, sobald KI das gefunden hat.
+- **Bezugsquelle**: Spielidee, **Sobald eine KI "ihren" Schatz gefunden bzw. aufgedeckt hat, muss sie ihre Spielfigur zu diesem bewegen, um ihn aufnehmen zu können.  **
 
 **Anforderung 3**
 
-- **Anforderung**: Warte auf Aktionen - Der Client muss nicht eine Aktion einfügen, wenn Reihe nicht leer ist.
+- **Anforderung**: Warte auf Aktionen - Der Client darf nicht eine Aktion einfügen, wenn anderer Spieler in der Reihe ist.
 - **Bezugsquelle**: Spielidee, **Eine KI darf aber keine Aktion setzen solange die andere KI an der Reihe ist**
 
 ### Typ der Anforderung: nicht funktional
@@ -38,13 +38,13 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 5**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Spieldauer - Während eines Spiels muss der Client seine Spielaktionen so schnell senden, dass das gesamte Spielzeit dauert maximal 10 minuten
+- **Bezugsquelle**: Spielidee, **Insgesamt dauert ein Spiel maximal 10 Minuten.**
 
 **Anforderung 6**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Rundenbegrenzung. Ab den Kartenaustausch muss der Client gegnerische Berg mit ihrem Schatz erreichen, bevor Spiel 320 Runde hat.
+- **Bezugsquelle**: Spielidee, **Um die Spiele für die Zuschauer spannend zu gestalten, wurde festgelegt, dass ein Spiel insgesamt nicht länger als 320 Spielaktionen (und damit 320 Runden) dauern darf**
 
 ### Typ der Anforderung: Designbedingung
 
