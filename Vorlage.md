@@ -8,7 +8,7 @@
 
 ## Aufgabe 1: Anforderungsanalyse
 
-Die Anforderungen 1-7 wurden aus Spielidee abgeleitet
+Die Anforderungen 1-7 wurden aus [https://moodle.univie.ac.at/mod/book/view.php?id=19904280] abgeleitet
 
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
