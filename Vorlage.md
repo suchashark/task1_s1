@@ -2,14 +2,9 @@
 
 ## Abgabedokument - Teilaufgabe 1 (Anforderungsanalyse und Planungsphase)
 
-### Persönliche Daten, bitte vollständig ausfüllen:
+- Kariavkina Elizaveta
+- 12450960
 
-- Nachname, Vorname: 
-- Matrikelnummer: 
-
-Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtlich Aufbau, Markdown-Syntax und weiterer Vorgaben als Grundlage verwendet werden. Die abzugebenden Dokumente für Teilaufgabe 1 sowie alle Dokumente der nachfolgenden Teilaufgaben müssen vollständig in Markdown (für den Text) und SVG (für Diagramme) erstellt werden.
-
-Diese Vorlage enthält Beispiele, die die erwarteten Inhalte und Ergebnisse verdeutlichen sollen. Entfernen Sie diese Beispiele vor der finalen Abgabe und fügen Sie Ihre eigenen Ausarbeitungen in die dafür vorgesehenen Bereiche ein. Weitere Beispiele und unterstützende Dokumente finden Sie in der Angabe auf Moodle.
 
 ## Aufgabe 1: Anforderungsanalyse
 
