@@ -16,24 +16,24 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 1**
 
-- **Anforderung**: Regisrtrierung am Server - Nach Start des Clients MUSS der Client beim Server registrieren
+- **Anforderung**: Regisrtrierung am Server - Nach Start MUSS der Client beim Server registrieren
 - **Bezugsquelle**: Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**
 
 **Anforderung 2**
 
-- **Anforderung**: Mindestanteile an Terrainart - Wenn der Client eine Kartenhälfte erzeugt, MUSS die Kartenhälfte mindestens 5 Bergfelder (10 %), 24 Wiesenfelder (48 %) und 7 Wasserfelder (14 %) enthalten, damit der Server sie als gültig akzeptiert.
-- **Bezugsquelle**: Spielidee, **Jede Kartenhälfte muss mindestens 10% Bergfelder, 48% Wiesenfelder, 14% Wasserfelder ... beinhalten.**
+- **Anforderung**: Das Aufnehmen eines Schatzes muss durchgefuert werden, wenn Spielfigur das Spielfeld mit einem Schatze der Karte betritt
+- **Bezugsquelle**: Spielidee, **Das Aufnehmen eines Schatzes und die Übernahme der Burg erfolgen automatisch durch den Server, sobald eine Spielfigur das jeweilige Spielfeld der Karte betritt.  **
 
 **Anforderung 3**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Warte auf Aktionen - Der Client muss nicht eine Aktion einfügen, wenn Reihe nicht leer ist.
+- **Bezugsquelle**: Spielidee, **Eine KI darf aber keine Aktion setzen solange die andere KI an der Reihe ist**
 
 ### Typ der Anforderung: nicht funktional
 
 **Anforderung 4**
 
-- **Anforderung**: Antwortzeit per Spielaktion - Sobald der Client an der Reihe ist, muss der Client in hoechsents 5 Senkunden ANtwort am Server schicken, um nicht zu Verlieren
+- **Anforderung**: Antwortzeit per Spielaktion - Sobald der Client an der Reihe ist, muss der Client in hoechsents 5 Senkunden ANtwort am Server schicken
 - **Bezugsquelle**: Spielidee, **Für jede dieser rundenbasierten Spielaktion hat die KI maximal 5 Sekunden Bedenkzeit... Sollten diese Bedingungen nicht erfüllt werden, verliert die KI, welche gerade an der Reihe ist, das Spiel automatisch und der zugehörige menschliche Spieler bekommt dies vom Client mitgeteilt.**
 
 **Anforderung 5**
