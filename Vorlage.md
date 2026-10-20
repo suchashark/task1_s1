@@ -21,7 +21,7 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 2**
 
-- **Anforderung**: Das Aufnehmen eines Schatzes muss durchgefuert werden, wenn Spielfigur das Spielfeld mit einem Schatze der Karte betritt
+- **Anforderung**: Aufnehmen eines Schatzes - Das Aufnehmen eines Schatzes muss durchgeführt werden, wenn Spielfigur das Spielfeld mit einem Schatze der Karte betritt
 - **Bezugsquelle**: Spielidee, **Das Aufnehmen eines Schatzes und die Übernahme der Burg erfolgen automatisch durch den Server, sobald eine Spielfigur das jeweilige Spielfeld der Karte betritt.  **
 
 **Anforderung 3**
