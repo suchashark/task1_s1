@@ -17,17 +17,17 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 **Anforderung 1**
 
 - **Anforderung**: Regisrtrierung am Server - Nach Start MUSS der Client sich beim Server registrieren
-- **Bezugsquelle**: [Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**]
+- **Bezugsquelle**: Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**
 
 **Anforderung 2**
 
-- **Anforderung**: Bewegung zum Schatz - Der Client muss seine Spielfigur zum Schatz bewegen, sobald KI das gefunden hat.
+- **Anforderung**: Bewegung zum Schatz - Der Client muss seine Spielfigur zum Schatz bewegen, sobald das eigene SChatz gefunden wurde.
 - **Bezugsquelle**: Spielidee, **Sobald eine KI "ihren" Schatz gefunden bzw. aufgedeckt hat, muss sie ihre Spielfigur zu diesem bewegen, um ihn aufnehmen zu können.  **
 
 **Anforderung 3**
 
-- **Anforderung**: Warte auf Aktionen - Der Client darf nicht eine Aktion einfügen, wenn anderer Spieler in der Reihe ist.
-- **Bezugsquelle**: Spielidee, **Eine KI darf aber keine Aktion setzen solange die andere KI an der Reihe ist**
+- **Anforderung**: Warte auf Aktionen - Der Client darf nicht eine Spielaktion an Server senden, wenn anderer Spieler an der Reihe ist.
+- **Bezugsquelle**: Spielidee, **Eine KI darf aber keine Aktion setzen solange die andere KI an der Reihe ist **
 
 ### Typ der Anforderung: nicht funktional
 
@@ -43,7 +43,7 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 6**
 
-- **Anforderung**: Rundenbegrenzung. Ab den Kartenaustausch muss der Client gegnerische Berg mit ihrem Schatz erreichen, bevor Spiel 320 Runde hat.
+- **Anforderung**: Effizienz der Weg - Ab den Kartenaustausch muss der Client gegnerische Burg mit ihrem Schatz erreichen, bevor Spiel 320 Runde hat.
 - **Bezugsquelle**: Spielidee, **Um die Spiele für die Zuschauer spannend zu gestalten, wurde festgelegt, dass ein Spiel insgesamt nicht länger als 320 Spielaktionen (und damit 320 Runden) dauern darf**
 
 ### Typ der Anforderung: Designbedingung
