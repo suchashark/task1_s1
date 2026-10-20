@@ -8,19 +8,16 @@
 
 ## Aufgabe 1: Anforderungsanalyse
 
-Die Anforderungen 1-7 wurden aus [https://moodle.univie.ac.at/mod/book/view.php?id=19904280] abgeleitet
-
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
-- **Kurzbeschreibung der übernommenen Teile**: *Was & Wo im Projekt, In welchem Umfang (Idee, Konzept, Texte, Grafik etc.) mit und ohne Anpassungen, etc.*
-- **Quellen der übernommenen Teile**: *Folien, Bücher, Namen der Quell-Studierenden, URLs zu Webseiten, KI Prompts, etc.*
+Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/view.php?id=19904280] abgeleitet
 
 ### Typ der Anforderung: funktional
 
 **Anforderung 1**
 
 - **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Bezugsquelle**: [Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**]
 
 **Anforderung 2**
 
