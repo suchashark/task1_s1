@@ -53,3 +53,7 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 - **Anforderung**: - Benutzeroberflaeche - Waehrend des Spiels muss der Client alle Ausgaben fuer den ANwender ausschliesslich ueber ein Command-Line-Interface darstellen
 - **Bezugsquelle**: Spielidee, **Während des Spiels müssen die Karte und deren bekannten Eigenschaften und wichtige Spielzustände von den Clients mittels command-line interface (CLI) für Anwender nachvollziehbar visualisiert werden.**
 
+- **Anforderung**: - Client/Server Arckitektur - Der Client muss ein Teil des Client/Server Arckitektur sein, und muss nur durch Server Spieldaten austausschen (Karte, Spielstatus, AKtionen)
+- **Bezugsquelle**: Spielidee, **Dabei werden die KIs von einem Server unterstützt der beide Clients koordiniert, Datenaustausch ermöglich, als Schiedsrichter auftritt und für Clients Daten speichert, aktualisiert und auswertet. Die Grobarchitektur ist damit als klassische Client/Server Architektur vorgegeben. **
+
+
