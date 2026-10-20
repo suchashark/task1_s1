@@ -16,8 +16,8 @@ Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/
 
 **Anforderung 1**
 
-- **Anforderung**: Regisrtrierung am Server - Nach Start MUSS der Client beim Server registrieren
-- **Bezugsquelle**: Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**
+- **Anforderung**: Regisrtrierung am Server - Nach Start MUSS der Client sich beim Server registrieren
+- **Bezugsquelle**: [Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**]
 
 **Anforderung 2**
 
