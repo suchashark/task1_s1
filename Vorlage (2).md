@@ -18,49 +18,49 @@ Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtl
 
 **Anforderung 1**
 
-- **Anforderung**: [Bewegung zum Schatz - Der Client muss seine Spielfigur zum Schatz bewegen, sobald das eigene SChatz gefunden wurde.]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Regisrtrierung am Server - Nach Start MUSS der Client sich beim Server registrieren
+- **Bezugsquelle**: Spielidee, **Initial gilt es am Server ein neues Spiel anzufordern. Dieser erste Schritt wird noch von einem Menschen durchgeführt, alles danach erfolgt immer vollautomatisch durch eine Client/KI-Implementierung. Nach Start des Clients registrieren sich die KIs für das Spiel am Server..**
 
 **Anforderung 2**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Bewegung zum Schatz - Der Client muss seine Spielfigur zum Schatz bewegen, sobald das eigene SChatz gefunden wurde.
+- **Bezugsquelle**: [Spielidee, **Sobald eine KI "ihren" Schatz gefunden bzw. aufgedeckt hat, muss sie ihre Spielfigur zu diesem bewegen, um ihn aufnehmen zu können**]
 
 **Anforderung 3**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Warte auf Aktionen - Der Client darf nicht eine Spielaktion an Server senden, wenn anderer Spieler an der Reihe ist.
+- **Bezugsquelle**: Spielidee, **Eine KI darf aber keine Aktion setzen solange die andere KI an der Reihe ist**
 
 ### Typ der Anforderung: nicht funktional
 
 **Anforderung 4**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Antwortzeit per Spielaktion
+- **Bezugsquelle**: Spielidee, **Für jede dieser rundenbasierten Spielaktion hat die KI maximal 5 Sekunden Bedenkzeit... Sollten diese Bedingungen nicht erfüllt werden, verliert die KI, welche gerade an der Reihe ist, das Spiel automatisch und der zugehörige menschliche Spieler bekommt dies vom Client mitgeteilt**
 
 **Anforderung 5**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Spieldauer - Während eines Spiels muss der Client seine Spielaktionen so schnell senden, dass das gesamte Spielzeit dauert maximal 10 minuten
+- **Bezugsquelle**: Spielidee, **Insgesamt dauert ein Spiel maximal 10 Minuten.**
 
 **Anforderung 6**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Effizienz der Weg - Ab den Kartenaustausch muss der Client gegnerische Burg mit ihrem Schatz erreichen, bevor Spiel 320 Runde hat
+- **Bezugsquelle**: Spielidee, **Um die Spiele für die Zuschauer spannend zu gestalten, wurde festgelegt, dass ein Spiel insgesamt nicht länger als 320 Spielaktionen (und damit 320 Runden) dauern darf**
 
 ### Typ der Anforderung: Designbedingung
 
 **Anforderung 7**
 
-- **Anforderung**: [Name plus Anforderung]
-- **Bezugsquelle**: [Spielidee, **Zitat**]
+- **Anforderung**: Benutzeroberflaeche - Waehrend des Spiels muss der Client alle Ausgaben fuer den ANwender ausschliesslich ueber ein Command-Line-Interface darstellen
+- **Bezugsquelle**: Spielidee, **Während des Spiels müssen die Karte und deren bekannten Eigenschaften und wichtige Spielzustände von den Clients mittels command-line interface (CLI) für Anwender nachvollziehbar visualisiert werden**
 
 
 ## Aufgabe 2: Anforderungsdokumentation
 
 ### Quellen dokumentieren - Aufgabe 2: Anforderungsdokumentation
 
-- **Kurzbeschreibung der übernommenen Teile**: *Was & Wo im Projekt, In welchem Umfang (Idee, Konzept, Texte, Grafik etc.) mit und ohne Anpassungen, etc.*
+- **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet.Alle Tete sind eigene Formulierungen*
 - **Quellen der übernommenen Teile**: *Folien, Bücher, Namen der Quell-Studierenden, URLs zu Webseiten, KI Prompts, etc.*
 
 ### Anforderungsüberblick
