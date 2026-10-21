@@ -11,7 +11,7 @@ Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtl
 
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
-- **Kurzbeschreibung der übernommenen Teile**: *Was & Wo im Projekt, In welchem Umfang (Idee, Konzept, Texte, Grafik etc.) mit und ohne Anpassungen, etc.*
+- **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet.Alle Texte sind eigene Formulierungen.*
 - **Quellen der übernommenen Teile**: *Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/view.php?id=19904280] abgeleitet*
 
 ### Typ der Anforderung: funktional
@@ -60,14 +60,14 @@ Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtl
 
 ### Quellen dokumentieren - Aufgabe 2: Anforderungsdokumentation
 
-- **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet.Alle Tete sind eigene Formulierungen*
-- **Quellen der übernommenen Teile**: *Folien, Bücher, Namen der Quell-Studierenden, URLs zu Webseiten, KI Prompts, etc.*
+- **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet.Alle Texte sind eigene Formulierungen.*
+- **Quellen der übernommenen Teile**: *Spielidee (https://moodle.univie.ac.at/mod/book/view.php?id=19904280), Foilen Software Engeneering 1*
 
 ### Anforderungsüberblick
 
 - **Name**: [Namen der Anforderung (wenige Wörter)]
-- **Beschreibung und Priorität**: [Geben Sie eine kurze Beschreibung (2-3 Sätze) der Anforderung an und definieren Sie die Priorität der Anforderung als: Hoch, Mittel, Niedrig]
-- **Relevante Anforderungen**: [Geben Sie an welche funktionalen und nichtfunktionalen Anforderungen aus der vorangegangenen Aufgabe mit dieser detaillierteren Anforderungsdokumentation in Wechselwirkung stehen.]
+- **Beschreibung und Priorität**: [Nach der Registrierung erzeugt der Client eine Kartenhälfte mit 5 x 10 Feldern und prüft sie selbst auf alle Kartenregeln. Ist die Kartenhälfte gültig, sendet der Client sie am Server, sobald er an der Reihe ist. Ohne gültige Kartenhälfte kann das Spiel nicht beginnen, deshalb ist die Priorität hoch]
+- **Relevante Anforderungen**: [Anforderung 1, Anforderung 3, Anforderung 4, Anforderung 7]
 - **Relevante Business Rules**: [Welche Regeln basierend aus den typischen Geschäftsalltag müssen für diese Anforderung berücksichtigt bzw. eingehalten werden, um diese korrekt umsetzen zu können? Es handelt sich hierbei um besondere Anforderungen. Daher Anforderungen für die explizit Prüflogik in den Code eingebaut würde bzw. werden muss um sicherzustellen, dass sich alle Beteiligten (z.B. der Client während der Kommunikation mit dem Server) an diese halten. Diese sind zumeist deshalb spezifischer als die Formulierung der Anforderungen. Im Falle der Übung stellt die Spielidee eine gute Quelle dafür dar da darin vermerkt ist wo, wann, warum und wie etwas validiert/geprüft wird.]
 
 ### Impuls/Ergebnis - Typisches Szenario
