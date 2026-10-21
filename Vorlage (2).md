@@ -2,8 +2,8 @@
 
 ### Persönliche Daten, bitte vollständig ausfüllen:
 
-- Nachname, Vorname: 
-- Matrikelnummer: 
+- Nachname, Vorname: Kariavkina Elizaveta
+- Matrikelnummer: 12450960
 
 Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtlich Aufbau, Markdown-Syntax und weiterer Vorgaben als Grundlage verwendet werden. Die abzugebenden Dokumente für Teilaufgabe 1 sowie alle Dokumente der nachfolgenden Teilaufgaben müssen vollständig in Markdown (für den Text) und SVG (für Diagramme) erstellt werden. Beispiele, die die erwarteten Inhalte und Ergebnisse verdeutlichen, finden Sie in der Teilaufgabe 1 Angabe in Moodle.
 
@@ -12,13 +12,13 @@ Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtl
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
 - **Kurzbeschreibung der übernommenen Teile**: *Was & Wo im Projekt, In welchem Umfang (Idee, Konzept, Texte, Grafik etc.) mit und ohne Anpassungen, etc.*
-- **Quellen der übernommenen Teile**: *Folien, Bücher, Namen der Quell-Studierenden, URLs zu Webseiten, KI Prompts, etc.*
+- **Quellen der übernommenen Teile**: *Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/view.php?id=19904280] abgeleitet*
 
 ### Typ der Anforderung: funktional
 
 **Anforderung 1**
 
-- **Anforderung**: [Name plus Anforderung]
+- **Anforderung**: [Bewegung zum Schatz - Der Client muss seine Spielfigur zum Schatz bewegen, sobald das eigene SChatz gefunden wurde.]
 - **Bezugsquelle**: [Spielidee, **Zitat**]
 
 **Anforderung 2**
