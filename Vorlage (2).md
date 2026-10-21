@@ -66,9 +66,17 @@ Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtl
 ### Anforderungsüberblick
 
 - **Name**: [Namen der Anforderung (wenige Wörter)]
-- **Beschreibung und Priorität**: [Nach der Registrierung erzeugt der Client eine Kartenhälfte mit 5 x 10 Feldern und prüft sie selbst auf alle Kartenregeln. Ist die Kartenhälfte gültig, sendet der Client sie am Server, sobald er an der Reihe ist. Ohne gültige Kartenhälfte kann das Spiel nicht beginnen, deshalb ist die Priorität hoch]
+- **Beschreibung und Priorität**: [Nach der Registrierung erzeugt der Client eine Kartenhälfte mit 5 x 10 Feldern. Nach der Sendung der Kartenhälfte und wartet auf Überprüfung vom Server. Mit nicht gültige Kartenhälfte ist das Spiel verloren, deshalb ist die Priorität hoch]
 - **Relevante Anforderungen**: [Anforderung 1, Anforderung 3, Anforderung 4, Anforderung 7]
-- **Relevante Business Rules**: [Welche Regeln basierend aus den typischen Geschäftsalltag müssen für diese Anforderung berücksichtigt bzw. eingehalten werden, um diese korrekt umsetzen zu können? Es handelt sich hierbei um besondere Anforderungen. Daher Anforderungen für die explizit Prüflogik in den Code eingebaut würde bzw. werden muss um sicherzustellen, dass sich alle Beteiligten (z.B. der Client während der Kommunikation mit dem Server) an diese halten. Diese sind zumeist deshalb spezifischer als die Formulierung der Anforderungen. Im Falle der Übung stellt die Spielidee eine gute Quelle dafür dar da darin vermerkt ist wo, wann, warum und wie etwas validiert/geprüft wird.]
+- **Relevante Business Rules**: [
+- Eine Karte besteht  aus 5 x 10 Feldern
+- Jedes Feld repräsentiert genau eine von drei möglichen Terrainarten: Wasser, Wiese oder Berg
+- Kartenhälften müssen zufällig mit Algorithmen generiert und nicht statisch vorgegeben werden
+- Jede Kartenhälfte muss mindestens 10% Bergfelder, 48% Wiesenfelder, 14% Wasserfelder
+- Es muss genau eine Burg auf der Kartenhälfte sein
+- Jeder potentiell betretbare Felder muss betretbar sein
+- Mindestens 51% der Felder jedes Randes der Kartenhälfte müssen betretbar sein
+- Der Client verliert, wenn seine Kartenhälfte ungültig ist.     ]
 
 ### Impuls/Ergebnis - Typisches Szenario
 
