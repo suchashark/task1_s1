@@ -65,7 +65,7 @@ Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtl
 
 ### Anforderungsüberblick
 
-- **Name**: [Kartenhälfte erzeugen]
+- **Name**: Kartenhälfte erzeugen
 - **Beschreibung und Priorität**: [Nach der Registrierung erzeugt der Client eine Kartenhälfte mit 5 x 10 Feldern. Nach der Sendung der Kartenhälfte und wartet auf Überprüfung vom Server. Mit nicht gültige Kartenhälfte ist das Spiel verloren, deshalb ist die Priorität hoch]
 - **Relevante Anforderungen**: [Anforderung 1, Anforderung 3, Anforderung 4, Anforderung 7]
 - **Relevante Business Rules**: [
