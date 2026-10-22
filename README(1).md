@@ -6,37 +6,17 @@
 
 **Goal.** `libft` is a static C library that re-implements a set of the most frequently used functions of the C standard library (`libc`) under the `ft_` prefix.
 
-**Overview.** The project is written from scratch. The functions of the first part may not call any external function at all (only /’malloc`/`free` where allocation is explicitly required), the code follows the 42 Norm and compiles with `-Wall -Wextra -Werror`.
+**Overview.** The project is written from scratch. The functions of the first part may not call any external function at all (only `malloc, free` where allocation is explicitly required), the code follows the 42 Norm and compiles with `-Wall -Wextra -Werror`.
 
-What it is **not**: it does not aim for the exact byte-level behaviour of every libc implementation. It implements what the man pages specify, including the well-defined edge cases that a copy-paste programmer never notices (overlapping buffers in `memmove`, `size == 0` in `strlcpy`, `NULL` terminator search in `strnstr`, `nmemb == 0` in `calloc`, the `INT_MIN` overflow in `itoa`).
 
-### What the library contains
 
-| Part | Content | Functions |
-| :--- | :--- | ---: |
-| 1 — libc re-implementations | Character classification, memory and string primitives, conversion | 23 |
-| 2 — additional functions | Allocation-backed strings, character/callback mapping, output to file descriptors | 11 |
-| 3 — linked list | Node and list management API | 9 |
-| | **Total** | **43** |
-
-**Deliverables**
-
-| Item | Path |
-| :--- | :--- |
-| Static library | `libft.a` (repository root) |
-| Public header | `libft.h` (repository root) |
-| Build script | `Makefile` (repository root) |
-| Sources | `ft_*.c` (repository root) |
-
----
 
 ## Instructions
 
 ### Requirements
 
-- A POSIX-like environment with `cc` (clang or gcc), `make` and `ar`.
-- No third-party dependency, no libtool, no external runtime library.
-- The whole project lives at the **root of the repository** — no `src/` or `include/` subdirectories.
+- Environment with `cc` , `make` and `ar`.
+- The whole project lives at the **root of the repository**
 
 ### Build
 
@@ -56,14 +36,7 @@ Available rules:
 | `make re` | `fclean` then `all` (full rebuild) |
 | `make bonus` | Build the optional bonus library (see *Optional bonus part*) |
 
-No unnecessary relinking: running `make` twice in a row does not rebuild anything, because `libft.a` depends on the object files and the object files depend on `libft.h`.
 
-A quick sanity check after the build:
-
-```console
-$ ls -l libft.a
-$ ar -t libft.a            # archive contents = one .o per source file
-$ nm -g libft.a | grep ' T ft_' | wc -l   # should report every public symbol
 ```
 
 ### Using the library in another project
