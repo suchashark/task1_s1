@@ -1,14 +1,12 @@
-*This project has been created as part of the 42 curriculum by \<login\>.*
+*This project has been created as part of the 42 curriculum by ekariavk.*
 
 # Libft — your very first own library
 
 ## Description
 
-**Goal.** `libft` is a static C library that re-implements a set of the most frequently used functions of the C standard library (`libc`) under the `ft_` prefix, adds a handful of helper functions that libc does not provide, and introduces a minimal singly linked list API. The aim is not to produce a competing libc, but to stop treating `strlen`, `memcpy` or `calloc` as magic: every behaviour implemented here had to be read in the man page, understood down to the edge cases, and reproduced exactly.
+**Goal.** `libft` is a static C library that re-implements a set of the most frequently used functions of the C standard library (`libc`) under the `ft_` prefix.
 
-The library is meant to be the foundation of the rest of the 42 curriculum — later projects copy `libft` into their repository and link against it instead of writing string plumbing again and again.
-
-**Overview.** The project is deliberately written from scratch. The functions of the first part may not call any external function at all (only `malloc`/`free` where allocation is explicitly required), the code follows the 42 Norm, compiles with `-Wall -Wextra -Werror`, and is archived into `libft.a` with `ar` at the root of the repository.
+**Overview.** The project is written from scratch. The functions of the first part may not call any external function at all (only \malloc`/`free` where allocation is explicitly required), the code follows the 42 Norm and compiles with `-Wall -Wextra -Werror`.
 
 What it is **not**: it does not aim for the exact byte-level behaviour of every libc implementation. It implements what the man pages specify, including the well-defined edge cases that a copy-paste programmer never notices (overlapping buffers in `memmove`, `size == 0` in `strlcpy`, `NULL` terminator search in `strnstr`, `nmemb == 0` in `calloc`, the `INT_MIN` overflow in `itoa`).
 
