@@ -5,7 +5,7 @@
 - Nachname, Vorname: Kariavkina Elizaveta
 - Matrikelnummer: 12450960
 
-Dieses Dokument dient als Vorlage für Teilaufgabe 1. Es muss zwingend hinsichtlich Aufbau, Markdown-Syntax und weiterer Vorgaben als Grundlage verwendet werden. Die abzugebenden Dokumente für Teilaufgabe 1 sowie alle Dokumente der nachfolgenden Teilaufgaben müssen vollständig in Markdown (für den Text) und SVG (für Diagramme) erstellt werden. Beispiele, die die erwarteten Inhalte und Ergebnisse verdeutlichen, finden Sie in der Teilaufgabe 1 Angabe in Moodle.
+
 
 ## Aufgabe 1: Anforderungsanalyse
 
