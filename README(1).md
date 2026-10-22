@@ -6,7 +6,7 @@
 
 **Goal.** `libft` is a static C library that re-implements a set of the most frequently used functions of the C standard library (`libc`) under the `ft_` prefix.
 
-**Overview.** The project is written from scratch. The functions of the first part may not call any external function at all (only \malloc`/`free` where allocation is explicitly required), the code follows the 42 Norm and compiles with `-Wall -Wextra -Werror`.
+**Overview.** The project is written from scratch. The functions of the first part may not call any external function at all (only /’malloc`/`free` where allocation is explicitly required), the code follows the 42 Norm and compiles with `-Wall -Wextra -Werror`.
 
 What it is **not**: it does not aim for the exact byte-level behaviour of every libc implementation. It implements what the man pages specify, including the well-defined edge cases that a copy-paste programmer never notices (overlapping buffers in `memmove`, `size == 0` in `strlcpy`, `NULL` terminator search in `strnstr`, `nmemb == 0` in `calloc`, the `INT_MIN` overflow in `itoa`).
 
