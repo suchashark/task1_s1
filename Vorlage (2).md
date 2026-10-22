@@ -12,7 +12,7 @@
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
 - **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet.Alle Texte sind eigene Formulierungen.*
-- **Quellen der übernommenen Teile**: *Die Anforderungen 1-7 wurden aus Spielidee[https://moodle.univie.ac.at/mod/book/view.php?id=19904280] abgeleitet*
+- **Quellen der übernommenen Teile**: *[Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv),[Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf), Vorlage.md.*
 
 ### Typ der Anforderung: funktional
 
@@ -61,8 +61,7 @@
 ### Quellen dokumentieren - Aufgabe 2: Anforderungsdokumentation
 
 - **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet. Alle Texte sind eigene Formulierungen.*
-- **Quellen der übernommenen Teile**: [Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv),  
-* [Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf), Vorlage.md.
+- **Quellen der übernommenen Teile**: *[Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv), [Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf), [Netzwerkprotokoll](Netzwerkprotokoll), [Beispiel einer Vorlage zur Anforderungsdokumentation der IEEE](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255152/srs_template-ieee.doc?time=1790373138896), Vorlage.md.*
 
 ### Anforderungsüberblick
 
@@ -70,7 +69,7 @@
 - **Beschreibung und Priorität**: [Nach der Registrierung erzeugt der Client eine Kartenhälfte mit 5 x 10 Feldern. Nach der Sendung der Kartenhälfte und wartet auf Überprüfung vom Server. Mit nicht gültige Kartenhälfte ist das Spiel verloren, deshalb ist die Priorität hoch]
 - **Relevante Anforderungen**: [Anforderung 1, Anforderung 3, Anforderung 4, Anforderung 7]
 - **Relevante Business Rules**: [
-- Eine Karte besteht  aus 5 x 10 Feldern
+- Eine Karte besteht aus 5 x 10 Feldern
 - Jedes Feld repräsentiert genau eine von drei möglichen Terrainarten: Wasser, Wiese oder Berg
 - Kartenhälften müssen zufällig mit Algorithmen generiert und nicht statisch vorgegeben werden
 - Jede Kartenhälfte muss mindestens 10% Bergfelder, 48% Wiesenfelder, 14% Wasserfelder
