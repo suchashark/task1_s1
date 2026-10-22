@@ -61,7 +61,10 @@
 ### Quellen dokumentieren - Aufgabe 2: Anforderungsdokumentation
 
 - **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet. Alle Texte sind eigene Formulierungen.*
-- **Quellen der übernommenen Teile**: *Spielidee (https://moodle.univie.ac.at/mod/book/view.php?id=19904280), Foilen Software Engeneering 1*
+- **Quellen der übernommenen Teile**: [Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv), 
+* [Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf): Skriptum aber insbesondere auch Ihre Vorlesungsmitschrift (Best Practices, typische Herausforderungen, Qualitätsaspekte: atomar, Aktor/System, Aktion, wann, standardisierte Schlüsselwörter)
+* Beispielanforderungen: Siehe Vorlesung, Block 2 sowie den Button „Aufgabe 1: Beispielanforderung“ unten
+* „Vorlage.md“: Vorlage für diese Aufgabe, in Ihrem SE1 GitLab Repository unter „Dokumentation > Teilaufgabe 1 > Vorlage.md“.*
 
 ### Anforderungsüberblick
 
