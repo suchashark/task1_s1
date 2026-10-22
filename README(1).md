@@ -37,37 +37,6 @@ Available rules:
 | `make bonus` | Build the optional bonus library (see *Optional bonus part*) |
 
 
-```
-
-### Using the library in another project
-
-Link the archive and include the header:
-
-```console
-$ cc -Wall -Wextra -Werror -I ./libft ./main.c ./libft/libft.a -o my_program
-```
-
-Following the curriculum convention, when a later project is allowed to use `libft`, its sources and its `Makefile` are copied into a `libft/` folder inside that project, and the project's own `Makefile` builds `libft` through that `Makefile` **before** compiling the project itself.
-
-### Testing
-
-The subject does not require submitting tests, but comparing the `ft_` versions against the system ones is the only reliable way to know the edge cases were understood:
-
-```console
-$ cc -Wall -Wextra -Werror -D TEST main.c libft.a -o test && ./test
-```
-
-Practical notes:
-
-- **Leaks**: build the test binary with `cc -fsanitize=address -g` or run it under `valgrind --leak-check=full`. Every `malloc` must have exactly one matching `free`; the list functions are the usual suspects.
-- **Crashes**: a segmentation fault, bus error or double free on any reachable input makes the project non-functional, so NULL-ish and zero-length inputs are worth testing explicitly.
-- **BSD-only functions**: `strlcpy`, `strlcat` and `bzero` are **not** part of glibc. To compare against the system implementation on a glibc machine, include `<bsd/string.h>` and link with `-lbsd` (`libbsd-dev`). This is a property of the host libc, not of the library.
-- **Norm**: the code is checked with `norminette`. Any norm error in a submitted file (bonus included) invalidates the project.
-
-### Optional bonus part
-
-Bonuses are evaluated separately from the mandatory part and are not required. If they exist, they live in `*_bonus.{c,h}` files, are reachable through a `bonus` rule in the `Makefile`, and are subject to the same Norm, the same compiler flags and the same "no globals" rule. The mandatory build must still work on its own.
-
 ---
 
 ## Library reference (detailed description)
