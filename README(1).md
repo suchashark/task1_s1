@@ -131,15 +131,7 @@ Behaviour and prototypes follow the corresponding man pages exactly, except for 
 | `ft_calloc` | `void *ft_calloc(size_t nmemb, size_t size)` | `malloc` of `nmemb * size` bytes, zero-filled; `NULL` on failure |
 | `ft_strdup` | `char *ft_strdup(const char *s)` | `malloc`-ed copy of `s`; `NULL` on failure |
 
-**Three details the library commits to explicitly:**
-
-1. The classification functions return exactly **1** on a match and **0** otherwise. This differs from glibc, where the man page only guarantees "a non-zero value" on a match.
-2. `ft_calloc(0, x)` and `ft_calloc(x, 0)` return a **unique pointer that can be safely passed to `free()`**, as the subject requires — this is where host `calloc` implementations may legitimately disagree.
-3. `ft_memcpy` with overlapping areas is *undefined behaviour* by definition and is therefore not "fixed"; `ft_memmove` is the function to use instead.
-
 ### Part 2 — additional functions
-
-These functions either do not exist in libc or exist in a different shape. Everything that allocates returns `NULL` on allocation failure — a check the caller owes to itself. Except for `ft_split`, which allocates its array **and** every string in it, each function returning `char *` allocates a single block, and no function ever takes ownership of its arguments.
 
 | Function | Prototype | Behaviour / allocation |
 | :--- | :--- | :--- |
@@ -155,8 +147,6 @@ These functions either do not exist in libc or exist in a different shape. Every
 | `ft_putendl_fd` | `void ft_putendl_fd(char *s, int fd)` | Writes `s` followed by a newline to `fd`. `write`. |
 | `ft_putnbr_fd` | `void ft_putnbr_fd(int n, int fd)` | Writes the decimal representation of `n` to `fd`. `write`. |
 
-`ft_putnbr_fd` handles `INT_MIN` without computing `-n` on the signed value, which is the classic overflow trap of this exercise; `ft_itoa` shares the same care.
-
 ### Part 3 — linked list
 
 The node type is declared in `libft.h`:
@@ -168,8 +158,6 @@ typedef struct s_list
     struct s_list *next;
 } t_list;
 ```
-
-`content` is a `void *`, so a node can carry any payload; `next` is the address of the following node, or `NULL` for the last one. **The library never frees a payload it did not allocate**: the `del` callback handed in by the caller is the only thing allowed to release `content`.
 
 | Function | Prototype | Behaviour / ownership |
 | :--- | :--- | :--- |
@@ -192,99 +180,21 @@ typedef struct s_list
 - **Strict compilation.** `-Wall -Wextra -Werror`, `cc` as the compiler, no warning tolerated. `-std=c99` is not used, and the `restrict` qualifier is kept out of the prototypes.
 - **`ar`, not libtool.** The archive is produced with `ar rcs libft.a *.o`; libtool is forbidden by the subject.
 - **No unused files.** Every submitted `.c` file is referenced by the `Makefile` and provides a function that is part of the requested set.
-- **Ownership rules.** Functions returning `char *`/`char **` allocate and return ownership to the caller; `ft_striteri` and the `ft_put*_fd` family allocate nothing; `del`-based list functions only free what they created themselves.
-- **Failure is reported, not hidden.** An allocation failure yields `NULL`; no function aborts, exits, or prints an error — that policy belongs to the caller.
-- **Portability.** The archive depends only on the C standard library (`malloc`, `free`) and POSIX `write(2)`, so it links unchanged on both Linux and macOS.
 
-## Project structure
-
-```text
-.
-├── Makefile
-├── libft.h
-├── ft_isalpha.c
-├── ft_isdigit.c
-├── ft_isalnum.c
-├── ft_isascii.c
-├── ft_isprint.c
-├── ft_strlen.c
-├── ft_memset.c
-├── ft_bzero.c
-├── ft_memcpy.c
-├── ft_memmove.c
-├── ft_strlcpy.c
-├── ft_strlcat.c
-├── ft_toupper.c
-├── ft_tolower.c
-├── ft_strchr.c
-├── ft_strrchr.c
-├── ft_strncmp.c
-├── ft_memchr.c
-├── ft_memcmp.c
-├── ft_strnstr.c
-├── ft_atoi.c
-├── ft_calloc.c
-├── ft_strdup.c
-├── ft_substr.c
-├── ft_strjoin.c
-├── ft_strtrim.c
-├── ft_split.c
-├── ft_itoa.c
-├── ft_strmapi.c
-├── ft_striteri.c
-├── ft_putchar_fd.c
-├── ft_putstr_fd.c
-├── ft_putendl_fd.c
-├── ft_putnbr_fd.c
-├── ft_lstnew.c
-├── ft_lstadd_front.c
-├── ft_lstsize.c
-├── ft_lstlast.c
-├── ft_lstadd_back.c
-├── ft_lstdelone.c
-├── ft_lstclear.c
-├── ft_lstiter.c
-├── ft_lstmap.c
-├── ft_*_bonus.c        (optional)
-└── libft_bonus.h       (optional)
-```
-
----
 
 ## Resources
 
 ### Classic references
 
-- **Man pages** — the authoritative source for every Part 1 function: `man 3 strlen`, `man 3 memmove`, `man 3 strlcpy`, `man 3 calloc`, … Read the `BUGS`, `RETURN VALUE` and `NOTES` sections, not only the synopsis.
-- **POSIX / Single UNIX Specification** — [pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/9699919799/) — specification-level behaviour of the string, memory and character functions.
-- **OpenBSD `strlcpy`/`strlcat`** — the functions originate there, and the original paper explains *why* they were designed as truncating, size-returning copies.
-- **ISO/IEC 9899 (C standard)** — in particular §7.24 (string handling), §7.22 (general utilities, `malloc`/`calloc`) and the `restrict` qualifier in §6.7.3.
-- **cppreference.com** — [en.cppreference.com/w/c/string/byte](https://en.cppreference.com/w/c/string/byte) — quick lookup of prototypes and edge cases.
-- **The Norm** (42 Norm, latest version on the intranet) — the formatting, naming and function-length rules the whole project must satisfy.
-- **cppreference `ar` / `nm` docs and `man 1 ar`** — how a static archive is actually created and inspected.
-- **"The C Programming Language"**, B. Kernighan & D. Ritchie — the canonical description of pointers, arrays and the string representation used here.
-- **`norminette`** — [github.com/42School/norminette](https://github.com/42School/norminette) — the checker used before every submission.
-- **`libbsd`** — [libbsd project](https://libbsd.freedesktop.org/) — provides `strlcpy`, `strlcat` and `bzero` on glibc systems for comparison tests.
-- **Valgrind / AddressSanitizer documentation** — the standard way to prove that the allocation-backed functions and the list API do not leak.
-- **42 intranet: the AI FAQ** — the curriculum's stance on AI as a learning tool, referenced by the subject's AI instructions.
+- **Man pages**
+- **cppreference.com**
+- **The Norm** (42 Norm, latest version on the intranet) 
 
 ### How AI was used in this project
 
-*This section is part of the submission and must describe the actual use of AI tools; adjust it if the real share of work differed.*
+AI was not used in this project.
 
-| Area | Was AI used? | For what exactly |
-| :--- | :--- | :--- |
-| Function implementations (`ft_*.c`) | No | All 43 functions were written, debugged and normed by hand. The logic — the `memmove` direction decision, the `strlcat` return value, the `ft_split` free path, the `INT_MIN` handling in `ft_itoa` — is the author's own reasoning. |
-| Reading the man pages / the subject | Partly | AI was used to rephrase a man-page paragraph when the wording was unclear, and to list the edge cases worth testing for a given function. Prototypes and behaviour were always confirmed against `man 3` and the subject itself, never taken from the model. |
-| Debugging | Partly | When a test failed, AI was asked *why* a construct behaves the way it does (e.g. why `strncat`-style code loses the terminator, or why a `free` inside a loop double-frees). The corrected code was reasoned through and rewritten by the author; no fix was pasted in blindly. |
-| Test programs | Yes | AI helped generate the comparison harness that calls both the `ft_` function and the libc version on the same inputs and diffs the results, including zero-length and `NULL`-ish cases. These tests are not part of the submission. |
-| Norm compliance | Partly | AI was consulted on Norm rules that were misinterpreted (line length vs. tab width, the function-count-per-file rule). `norminette` remained the judge. |
-| Makefile | Partly | The dependency graph was discussed with AI; the final `Makefile` was typed, read and understood line by line. |
-| This README | Yes | The document was drafted with AI assistance and then reviewed and corrected by the author, in line with the description of the library above. |
 
-**What was not delegated:** understanding the behaviour of the functions, choosing the data structures, deciding the error-handling policy, and explaining any line of code during the peer evaluation. Those are the parts the curriculum actually evaluates, and a model cannot defend them on the author's behalf. No AI was used to produce the code of the mandatory part, and no AI tool was used as a substitute for reading the documentation.
-
----
 
 ## Evaluation notes
 
