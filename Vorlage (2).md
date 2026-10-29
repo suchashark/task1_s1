@@ -172,7 +172,7 @@
 - + - Berg
 - _ - Wiesen
 - /# - Burg
-- 
+
     ``` Karte:   ```
      ```..........   ```
      ```..........   ```
@@ -195,6 +195,7 @@ Alle Diagramme in dieses Kapitel als SVG einfügen.
 - **Kurzbeschreibung der übernommenen Teile**: *Spielidee und Best Practices wurden aus Moodle Seite abgeleitet. Alle Texte sind eigene Formulierungen. *
 - **Quellen der übernommenen Teile**: *[Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv), [Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf), [Netzwerkprotokoll](Netzwerkprotokoll), Vorlage.md.*
 ### Klassendiagramm
+-Use Case 3
 
 [Klassendiagramm.svg]
 
@@ -203,5 +204,5 @@ Alle Diagramme in dieses Kapitel als SVG einfügen.
 [Sequenzdiagramm_1.svg]
 
 ### Sequenzdiagramm 2
-
+-Use Case 4
 [Sequenzdiagramm_2.svg]
