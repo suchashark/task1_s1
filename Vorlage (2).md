@@ -173,13 +173,13 @@
 - _ - Wiesen
 - /# - Burg
 -  ```
-  Karte:
-  ..........
-  ..........
-  ..++......
-  ......_...
-  ..........
-  Validator: Karte ist ungueltig
+  Karte:   ```
+     ```..........   ```
+     ```..........   ```
+     ```..++......   ```
+     ```......_...   ```
+     ```..........   ```
+     ```Validator: Karte ist ungueltig
    ```
 
 ### Externe Schnittstellen
