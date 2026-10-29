@@ -79,73 +79,114 @@
 - Der Client verliert das Spiel automatisch, wenn seine Kartenhälfte ungültig ist.     ]
 
 ### Impuls/Ergebnis - Typisches Szenario
-- **Impuls** Der Client startet den Algorithmus fuer Generierung 5 x 10 Kartenhälfte
-- **Impuls** 
+
 
 
 **Vorbedingungen:**
 
 - Das Client hat sich erfolgreich am Server für ein Spiel registriert.
-- Der Client besitzt eindeutige SpielID
-- Es ist nächstes Schritt nach der Registrierung, bei dem Client Kartenhälfte generieren muss
+- Der Client besitzt eindeutige SpielID.
+- Es ist nächstes Schritt nach der Registrierung, bei dem Client Kartenhälfte generieren muss.
 
 **Hauptsächlicher Ablauf:**
 
-- [Schritte des Ablaufs beschreiben.]
+- **Impuls** Der Client startet den Algorithmus fuer Generierung 5 x 10 Kartenhälfte.
+- **Ergebnis** Kartenhälfte wird erstellt, die alle Business Rules erfuellt.
+
+- **Impuls** Der Client sendet die Kartenhälfte zum Server.
+- **Ergebnis** Der Server empfaengt die Kartenhälfte. validiert sie fuer Business rules und schickt ResponseEnvelope.
+
+- **Impuls** Der Client bekommt ResponseEnvelope und bearbeitet es.
+- **Ergebnis** Der Client stellt fest, dass  Kartenhälfte akzeptiert ist.
 
 **Nachbedingungen:**
 
-- [Auch die Auswirkung des hauptsächlichen Ablaufs und die direkt anschließenden Schritte müssen angeführt werden (Nachbedingungen). Dies soll EntwicklerInnen verdeutlichen wie sich eine Anforderung in den typischen Programmablauf einbettet.]
-
+- Die Kartenhälfte ist am Server validierd und akzeptiert
+- Der Client geht in dem naechsten Spielzustand.
+  
 ### Impuls/Ergebnis - Alternativszenario
 
-[Ein Alternativszenario, das vergleichbare Vorbedingungen (zum typischen Szenario) aufweist, jedoch sich im Ablauf und Nachbedingungen unterscheidet. Hilft sich Variationen und Verzweigungen im Ablauf bewusst zu werden.]. 
 
 **Vorbedingungen:**
 
-- [Stellen Sie sicher, dass erkennbar ist welche Schritte dazu führen, dass eine Anforderung relevant wird (Vorbedingungen).]
+
+- Das Client hat sich erfolgreich am Server für ein Spiel registriert.
+- Der Client besitzt eindeutige SpielID.
+- Es ist nächstes Schritt nach der Registrierung, bei dem Client Kartenhälfte generieren muss.
+- Der Client verfügt über einen Validierungsalgorithmus, um Kartenhälfte zu überprüfen
 
 **Hauptsächlicher Ablauf:**
 
-- [Schritte des Ablaufs beschreiben.]
+- **Impuls** Der Client startet den Algorithmus für Generierung 5 x 10 Kartenhälfte und überprüft sie.
+- **Ergebnis** Kartenhälfte wird erstellt, die bei Validierungsalgorithmus nicht akzeptiert wurde.
+
+- **Impuls** Der Client bekommt das Ergebnis der Validierung und generiert 5 x 10 Kartenhälfte mit Validierung danach.
+- **Ergebnis** Kartenhälfte wird erstellt, die bei Validierungsalgorithmus akzeptiert wurde.
+
+- **Impuls** Der Client sendet die Kartenhälfte zum Server.
+- **Ergebnis** Der Server empfaengt die Kartenhälfte. validiert sie fuer Business rules und schickt ResponseEnvelope.
+
+- **Impuls** Der Client bekommt ResponseEnvelope und bearbeitet es.
+- **Ergebnis** Der Client stellt fest, dass  Kartenhälfte akzeptiert ist.
 
 **Nachbedingungen:**
 
-- [Auch die Auswirkung des hauptsächlichen Ablaufs und die direkt anschließenden Schritte müssen angeführt werden (Nachbedingungen). Dies soll EntwicklerInnen verdeutlichen wie sich eine Anforderung in den typischen Programmablauf einbettet.]
+- Die Kartenhälfte ist am Server validiert und akzeptiert
+- Der Client geht in dem naechsten Spielzustand.
+- Obwohl extra Zeit wird gebraucht, um Kartenhälfte selbst zu validieren, das erhöht die Möglichkeit, das Kartenhälfte beim Server akzeptiert wurde
 
 ### Impuls/Ergebnis - Fehlerfall
 
-[Erwarteten Fehlerfall beschreiben und wie dieser gehandhabt wird. Dies ist besonders relevant, da ansonsten nur Gutfälle berücksichtigt werden was im Produktiveinsatz schnell nicht mehr ausreichend ist.]
+
 
 **Vorbedingungen:**
 
-- [Stellen Sie sicher, dass erkennbar ist welche Schritte dazu führen, dass eine Anforderung relevant wird (Vorbedingungen).]
-
+- Das Client hat sich erfolgreich am Server für ein Spiel registriert.
+- Der Client besitzt eindeutige SpielID.
+- Das Client generiert Kartenhälfte, die gegen ein oder mehrere Business Rules verstößt.
+- 
 **Hauptsächlicher Ablauf:**
 
-- [Schritte des Ablaufs beschreiben, insbesondere wie der Fehler entstanden ist und wie er behandelt wird.]
+- **Impuls** Der Client startet den Algorithmus fuer Generierung 5 x 10 Kartenhälfte.
+- **Ergebnis** Kartenhälfte wird erstellt, die nicht alle Business Rules erfüllt.
+
+- **Impuls** Der Client sendet die Kartenhälfte zum Server.
+- **Ergebnis** Der Server empfängt die Kartenhälfte checkt sie für Business Rules und schickt ResponseEnvelope mit Fehler.
+
+- **Impuls** Der Client bekommt ResponseEnvelope und bearbeitet es.
+- **Ergebnis** Der Client hat verloren.
+  
 
 **Nachbedingungen:**
-
-- [Auch die Auswirkung des hauptsächlichen Ablaufs und die direkt anschließenden Schritte müssen angeführt werden (Nachbedingungen). Dies soll EntwicklerInnen verdeutlichen wie sich eine Anforderung in den typischen Programmablauf einbettet.]
-
+- Der Client hat automatisch verloren
+- Es gibt Visualisierung in CLI
+  Der Client sendet keine weiteren Aktionen   
 ### Benutzergeschichten
 
-- [Zugehörige User Stories, welche die Anforderung genauer beschreiben mit folgendem Aufbau: Als \<Rolle> möchte ich \<Ziel/Wunsch> um s folgendes \<Nutzen> zu erreichen. Geeignete Rollen wären: (Menschlicher) Anwender, Client, KI oder Server. Darauf achten alle drei Themen abzudecken (Rolle, Ziel, Nutzen).]
-
+- Als Anwender möchte ich visualisiere Kartenhälft im CLI sehen, um Fehler zu erkennen.
+- Als KI möchte ich eigene Validierungsalgorithmus haben, um Fehler rechtzeitig zu bemerken.
+- 
 ### Benutzerschnittstelle
 
-- [Geben Sie hier ein Beispiel/Mockup für die zugehörige Benutzerschnittstelle an, um darzustellen welchen Einfluss diese Anforderung auf die CLI Benutzeroberfläche hat. Dies soll Ihnen ermöglichen schon vor dem Entwurf festzustellen was und wie Informationen in einer Anwendung dargestellt werden – was wiederum beim späteren Entwurf der Architektur hilft. Da nur CLI verlangt ist kann das Beispiel/Mockup einfach als Text in dieses Dokument eingegeben werden. **Tipp:** Verwenden Sie in Markdown Code-Blöcke mit drei Backticks \`\`\` oder \` für Inline-Code. Dies sorgt für eine dicktengleiche Schrift (alle Zeichen haben identische Maße).]
+- .  - Wasser
+- + - Berg
+- _ - Wiesen
+- /# - Burg
 -  ```
-   First A B C 
-   Second Step
-   And Something More
+  Karte:
+  ..........
+  ..........
+  ..++......
+  ......_...
+  ..........
+  Validator: garte ist ungueltig
    ```
 - `Let's goooo!`
 
 ### Externe Schnittstellen
 
-- [Beschreiben Sie hier kurz die für die gewählte Anforderung bzw. dessen Realisierung relevanten Schnittstellen zu externen Systemen. 1-2 Sätze je Schnittstelle mit Informationen zu den ausgetauschten Informationen, Netzwerkverbindungen, Protokollen, wesentliche Daten, Beschränkung usw. (siehe Netzwerkprotokoll) die EntwicklerInnen erkennbar machen sollen wie mit den Schnittstellen interagiert werden muss. In Blick in das Netzwerkprotokoll soll so abgekürzt oder sogar vermieden werden können während der Entwicklung.]
+-Format: ASCII, so dass in Terminal printbar
+-
 
 ## Aufgabe 3: Architektur entwerfen, modellieren und validieren
 
@@ -153,17 +194,16 @@ Alle Diagramme in dieses Kapitel als SVG einfügen.
 
 ### Quellen dokumentieren - Aufgabe 3: Architektur entwerfen, modellieren und validieren
 
-- **Kurzbeschreibung der übernommenen Teile**: *Was & Wo im Projekt, In welchem Umfang (Idee, Konzept, Texte, Grafik etc.) mit und ohne Anpassungen, etc.*
-- **Quellen der übernommenen Teile**: *Folien, Bücher, Namen der Quell-Studierenden, URLs zu Webseiten, KI Prompts, etc.*
-
+- **Kurzbeschreibung der übernommenen Teile**: *Spielidee und Best Practices wurden aus Moodle Seite abgeleitet. Alle Texte sind eigene Formulierungen. *
+- **Quellen der übernommenen Teile**: *[Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv), [Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf), [Netzwerkprotokoll](Netzwerkprotokoll), Vorlage.md.*
 ### Klassendiagramm
 
-[Klassendiagramm hier samt, bei Bedarf, Beschreibung beziehungsweise Erläuterung einfügen]
+[Klassendiagramm.svg]
 
 ### Sequenzdiagramm 1
 
-[Sequenzdiagramm 1 hier samt, bei Bedarf, Beschreibung beziehungsweise Erläuterung einfügen]
+[Sequenzdiagramm_1.svg]
 
 ### Sequenzdiagramm 2
 
-[Sequenzdiagramm 2 hier samt, bei Bedarf, Beschreibung beziehungsweise Erläuterung einfügen]
+[Sequenzdiagramm_2.svg]
