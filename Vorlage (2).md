@@ -2,7 +2,7 @@
 
 ### Persönliche Daten, bitte vollständig ausfüllen:
 
-- Nachname, Vorname: Kariavkina Elizaveta
+- Nachname, Vorname: Kariavkina, Elizaveta
 - Matrikelnummer: 12450960
 
 
@@ -11,7 +11,7 @@
 
 ### Quellen dokumentieren - Aufgabe 1: Anforderungsanalyse
 
-- **Kurzbeschreibung der übernommenen Teile**: *Die Business Rules, Szenarien und Zahlenwerte wurden aus Spielidee abgeleitet.Alle Texte sind eigene Formulierungen.*
+- **Kurzbeschreibung der übernommenen Teile**: *Die Anforderungen wurden aus Spielidee abgeleitet. Alle Texte sind eigene Formulierungen.*
 - **Quellen der übernommenen Teile**: *[Spielidee](https://moodle.univie.ac.at/mod/book/view.php?id=19904280],  [Spielaufzeichnung](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/ExampleGame.mkv),[Block 2](https://moodle.univie.ac.at/pluginfile.php/32629322/mod_lesson/page_contents/255150/Software%20Engineering%20I%20Anforderungsanalyse%20Unterlagen.pdf), Vorlage.md.*
 
 ### Typ der Anforderung: funktional
@@ -52,7 +52,7 @@
 
 **Anforderung 7**
 
-- **Anforderung**: Benutzeroberflaeche - Waehrend des Spiels muss der Client alle Ausgaben fuer den ANwender ausschliesslich ueber ein Command-Line-Interface darstellen
+- **Anforderung**: Benutzeroberflaeche - Waehrend des Spiels muss der Client alle Ausgaben fuer den Anwender ausschliesslich ueber ein Command-Line-Interface darstellen
 - **Bezugsquelle**: Spielidee, **Während des Spiels müssen die Karte und deren bekannten Eigenschaften und wichtige Spielzustände von den Clients mittels command-line interface (CLI) für Anwender nachvollziehbar visualisiert werden**
 
 
@@ -76,15 +76,18 @@
 - Es muss genau eine Burg auf der Kartenhälfte sein
 - Jeder potentiell betretbare Felder muss betretbar sein
 - Mindestens 51% der Felder jedes Randes der Kartenhälfte müssen betretbar sein
-- Der Client verliert, wenn seine Kartenhälfte ungültig ist.     ]
+- Der Client verliert das Spiel automatisch, wenn seine Kartenhälfte ungültig ist.     ]
 
 ### Impuls/Ergebnis - Typisches Szenario
+- **Impuls** Der Client startet den Algorithmus fuer Generierung 5 x 10 Kartenhälfte
+- **Impuls** 
 
-[Welche Schritte werden durchlaufen, um das der Anforderung zugehörige Verhalten auszulösen bzw. zu nutzen, und was ist das unmittelbare Ergebnis jedes Schrittes? Die Impuls-/Ergebnis-Pärchen entsprechend kennzeichnen. Mehrere aufeinander aufbauende bzw. zusammengehörige Pärchen definieren. Diese dienen dazu, den Stakeholdern relevante Abläufe, Bedingungen und Reihenfolgen zu verdeutlichen. Sich dieser Pärchen bewusst zu werden, hilft bei der späteren Architektur in Aufgabe 3 (z. B. wann wird welche Methode aufgerufen).] 
 
 **Vorbedingungen:**
 
-- [Stellen Sie sicher, dass erkennbar ist welche Schritte dazu führen, dass eine Anforderung relevant wird (Vorbedingungen).]
+- Das Client hat sich erfolgreich am Server für ein Spiel registriert.
+- Der Client besitzt eindeutige SpielID
+- Es ist nächstes Schritt nach der Registrierung, bei dem Client Kartenhälfte generieren muss
 
 **Hauptsächlicher Ablauf:**
 
