@@ -172,15 +172,14 @@
 - + - Berg
 - _ - Wiesen
 - /# - Burg
--  ```
-  Karte:   ```
+- 
+    ``` Karte:   ```
      ```..........   ```
      ```..........   ```
      ```..++......   ```
      ```......_...   ```
      ```..........   ```
-     ```Validator: Karte ist ungueltig
-   ```
+     ```Validator: Karte ist ungueltig   ```
 
 ### Externe Schnittstellen
 
