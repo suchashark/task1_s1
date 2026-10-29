@@ -179,9 +179,8 @@
   ..++......
   ......_...
   ..........
-  Validator: garte ist ungueltig
+  Validator: Karte ist ungueltig
    ```
-- `Let's goooo!`
 
 ### Externe Schnittstellen
 
