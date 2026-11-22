@@ -1,10 +1,10 @@
-## Hamming numbers implementation
+## Basic Remoting Patterns
 - Surname,Name: Kariavkina, Elizaveta
 - Student ID: 12450960
 
 
 
-## Basic Remoting Patterns
+
 - I have created 3 packages: client, server, common
 # Common 
 -has classes which both server and client use
